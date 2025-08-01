@@ -1,16 +1,29 @@
-
 // Mobile Menu Toggle
 const menuIcon = document.getElementById('menu-icon');
 const navbar = document.querySelector('.navbar');
+const body = document.body;
 
 menuIcon.addEventListener('click', () => {
     navbar.classList.toggle('active');
+    body.classList.toggle('nav-active');
+    
+    // Change menu icon between bars and times
+    if (navbar.classList.contains('active')) {
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-times');
+    } else {
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-bars');
+    }
 });
 
 // Close menu when clicking on nav links
 document.querySelectorAll('.navbar a').forEach(link => {
     link.addEventListener('click', () => {
         navbar.classList.remove('active');
+        body.classList.remove('nav-active');
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-bars');
     });
 });
 
