@@ -82,26 +82,6 @@
     window.addEventListener('scroll', animateSkillBars);
     window.addEventListener('load', animateSkillBars);
 
-    // Download CV Button
-    const downloadCvBtn = document.getElementById('download-cv');
-    const resumeDownload = document.getElementById('resume-download');
-
-    function downloadCV() {
-    // Use the actual hosted CV URL
-    const cvUrl = 'https://pooja231003.github.io/Portfolio/Pooja_B_S_Resume_CV_.pdf';
-    
-    // Open the CV in a new tab (view mode)
-    window.open(cvUrl, '_blank');
-}
-
-    if (downloadCvBtn) {
-        downloadCvBtn.addEventListener('click', downloadCV);
-    }
-
-    if (resumeDownload) {
-        resumeDownload.addEventListener('click', downloadCV);
-    }
-
     // Form Submission
     const contactForm = document.querySelector('.contact-form form');
 
