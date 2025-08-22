@@ -93,7 +93,7 @@ function downloadCV() {
     // Create a temporary anchor element
     const link = document.createElement('a');
     link.href = cvUrl;
-    link.download = 'Pooja_BS_Resume.pdf';
+    link.download = 'Pooja_B_S_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
